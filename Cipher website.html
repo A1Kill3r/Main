@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Cipher solver</title>
+<style>
+html {
+  height : 100%;
+}
+body {
+  background-image: radial-gradient(circle, #DBA100, #F2541B, #C91853, #A8186E, #472AB8);
+}
+h1 {
+  color : #000000;
+  text-align : center;
+}
+h2 {
+  color : #000000;
+}
+p {
+  color : #000000;
+  font-family : helvetica;
+  text-align : center;
+}
+hr {
+  border : 2px solid #000000;
+}
+textarea {
+  background-color : rgb(201, 201, 201, 0.25);
+  border-color : #000000;
+  color : #FFFFFF;
+}
+button {
+  background-color : transparent;
+  border-color : #000000;
+  color : #FFFFFF;
+}
+div.information {
+  position : absolute;
+  top : 0px;
+  left : 0px;
+  height : 150px;
+  width : 1250px;
+  border : 5px solid #000000;
+  margin : 10px;
+  text-align : center;
+}
+div.selection {
+  position : absolute;
+  top : 155px;
+  left : 0px;
+  height : 200px;
+  width : 265px;
+  border : 5px solid #000000;
+  margin : 10px;
+  text-align : center;
+}
+div.input {
+  position : absolute;
+  top : 155px;
+  left : 270px;
+  height : 200px;
+  width : 980px;
+  border : 5px solid #000000;
+  margin : 10px;
+  text-align : center;
+}
+div.output {
+  position : absolute;
+  bottom : 0px;
+  left : 0px;
+  height : 198px;
+  width : 1250px;
+  border : 5px solid #000000;
+  margin : 10px;
+  text-align : center;
+}
+</style>
+<h1>Cipher solver</h1>
+<div class = "information">
+  <br><br><br>
+  This website will allow you to encode and decode using several different ciphers. A cipher is a device used to encrypt
+   a string of text which is more difficult for someone else to understand unless they have the key. Some of the ciphers
+    available to use on this website include the well known Caesar cipher and Enigma cipher. The first cipher ever invented
+     was most likely by the Greeks in rougly 400BC
+     and was used to prevent opposing military commanders from reading their
+      messages. Nowadays, there are many different types of ciphers which range from substitution ciphers - which replace
+       the letters of the alphabet with other characters (e.g. 'a' could become '@') - to transposition ciphers - which
+        rearrange the text into a different form (e.g. 'abcd' could be written in a 2x2 block and read column by column).
+</div>
+
+<div class = "selection">Choose encode / decode & the cipher
+  <br>
+  <input type = "radio" id="encode" name="choice" value="Encode">
+  <label for = "encode">Encode</label>
+  <input type = "radio" id="decode" name="choice" value="Decode">
+  <label for = "decode">Decode</label>
+  <hr>
+  <input type = "radio" id="caesar" name="cipher" value="Caesar">
+  <label for = "caesar">Caesar</label>
+  <input type = "radio" id="enigma" name="cipher" value="Enigma">
+  <label for = "enigma">Enigma</label>
+  <br><br><br>
+  <input type = "radio" id="vigenere" name="cipher" value="Vigenere">
+  <label for = "vigenere">Vigenere</label>
+  <input type = "radio" id="affine" name="cipher" value="Affine">
+  <label for = "affine">Affine</label>
+  <br><br><br>
+  <input type = "radio" id="substitution" name="cipher" value="Substitution">
+  <label for = "substitution">Substitution</label>
+  <input type = "radio" id="filler" name="cipher" value="Filler">
+  <label for = "filler">Filler</label>
+</div>
+
+<div class = "input">
+  <label for="Initial">Enter your text to be encoded / decoded & the key (no key will result in random key / bruteforce respectively):</label>
+  <br>
+  <textarea name="Initial" rows="7" cols="135"
+  placeholder="Enter text here:"></textarea>
+  <textarea name="InputKey" rows="1" cols="135"
+  placeholder="Enter key here:"></textarea>
+  <br>
+  <button style="font-size: 20px">Run</button>
+</div>
+<div class = "output">Answer
+  <br>
+  <textarea name="Initial" rows="9" cols="173"
+  placeholder="Your answer will be here:"></textarea>
+  <textarea name="InputKey" rows="1" cols="173"
+  placeholder="Your key will be here:"></textarea>
+</div>
+</body>
+</html>
